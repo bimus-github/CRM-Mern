@@ -4,20 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { grey } from "@mui/material/colors";
 
-const drawerWidth = 240;
 const navItems = [
   {
     name: "Home",
@@ -101,7 +93,7 @@ function RouteHomeAdmin({ children }) {
       </AppBar>
       <Box component="div" sx={{ p: 5 }}>
         <Toolbar />
-        <div>{children}</div>
+        {children}
       </Box>
     </Box>
   );
