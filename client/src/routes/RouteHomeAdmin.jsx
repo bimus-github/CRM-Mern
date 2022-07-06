@@ -51,6 +51,7 @@ function RouteHomeAdmin({ children }) {
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
+        minHeight: 1000,
       }}
     >
       <AppBar component="nav">
