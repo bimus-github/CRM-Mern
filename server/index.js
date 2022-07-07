@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import router from "./routes/auth.js";
+import router from "./routes/index.js";
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use(cors());
 
-app.use("/auths", router);
+app.use("/", router);
 
 const CONNECTION_URL =
   "mongodb+srv://madaminjon:madaminjonMernCrm@cluster0.xmkf6nz.mongodb.net/?retryWrites=true&w=majority";

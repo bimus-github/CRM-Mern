@@ -11,9 +11,13 @@ import React from "react";
 function CardForHome({ prop }) {
   return (
     <Grid xs={6} lg={4} item>
-      <Card sx={{ minWidth: 345 }} xs={8}>
-        <CardActionArea>
+      <Card sx={{ width: 345, height: 400 }} xs={8}>
+        <CardActionArea style={{ width: "100%", height: "100%" }}>
           <CardMedia
+            style={{
+              width: "100%",
+              height: "85%",
+            }}
             component="img"
             height="100%"
             image={prop.img}
@@ -21,7 +25,7 @@ function CardForHome({ prop }) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {prop.name}
+              <div style={{ fontFamily: "cursive" }}>{prop.name}</div>
             </Typography>
           </CardContent>
         </CardActionArea>

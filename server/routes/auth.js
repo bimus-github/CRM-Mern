@@ -1,9 +1,5 @@
-import express from "express";
 import { createAuth, getAuths } from "../controllers/auth.js";
+import router from "./index.js";
 
-const router = express.Router();
-
-router.get("/", getAuths);
-router.post("/", createAuth);
-
-export default router;
+router.get("/auths", getAuths);
+router.post("/auths", createAuth);
